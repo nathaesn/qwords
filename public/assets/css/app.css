@@ -1,0 +1,251 @@
+@font-face {
+    font-family: "Plus Jakarta Sans";
+    src: url("../fonts/PlusJakartaSans.ttf");
+}
+
+:root {
+    --white-color: #fff;
+    --black-color: #212529;
+    --gray-color: #a0a0a0;
+    --primary-color: #ff6d0b;
+    --light-primary-color: #feecdd;
+    --light-white-color: #fff9f5;
+    --dark-primary-color: #cf3b21;
+    --steptrack-color: #c5c5c5;
+    --border-radius-size: 2rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius-size);
+}
+
+body {
+    font-family: "Plus Jakarta Sans", sans-serif;
+    background-color: var(--light-white-color);
+    padding-top: 1%
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.8);
+    transition: background-color 0.3s ease-out, backdrop-filter 0.3s ease-out, opacity 0.3s ease-out;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    opacity: 1;
+}
+
+.btn {
+    border-radius: var(--border-radius-size);
+    font-weight: 700;
+    padding: 0.4rem 1.2rem;
+}
+.btn-lg {
+    font-size: 1.25rem;
+    padding: 1rem 3rem;
+}
+.btn-qw-primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn-qw-primary:hover {
+    color: var(--white-color);
+    background-color: var(--dark-primary-color);
+}
+.btn-qw-outline-primary {
+    background-color: transparent;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+.btn-qw-outline-primary:hover {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+.btn-qw-transparent {
+    background: transparent;
+    color: var(--primary-color);
+}
+.btn-qw-transparent:hover {
+    color: var(--dark-primary-color);
+}
+.btn-qw-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-width: 3px;
+    display: grid;
+    place-items: center;
+}
+
+.bg-qw-primary {
+    color: var(--white-color);
+    background-color: var(--primary-color);
+}
+.bg-qw-light-primary {
+    background-color: var(--light-primary-color);
+}
+
+.text-qw-dark {
+    color: var(--black-color);
+}
+.text-qw-primary {
+    color: var(--primary-color);
+}
+
+.qw-rounded {
+    border-radius: var(--border-radius-size);
+}
+
+.title {
+    font-size: 3.5rem;
+}
+@media (max-width: 768px) {
+    .title {
+        font-size: 2.5rem;
+    }
+}
+@media (max-width: 576px) {
+    .title {
+        font-size: 2.2rem;
+    }
+}
+
+.form-control,
+.form-select {
+    padding: 1.2rem 1.6rem !important;
+    border-radius: var(--border-radius-size) !important;
+}
+
+.accordion-item {
+    border: 1px solid #d9d9d9 !important;
+    margin-bottom: 1rem;
+    border-radius: var(--border-radius-size) !important;
+}
+.accordion-button {
+    border-radius: var(--border-radius-size);
+    padding: 1.5rem;
+    font-weight: 800;
+}
+.accordion-button:after {
+    background-color: #feecdd;
+    padding: 1em;
+    border-radius: 50%;
+    background-image: url("https://qwords.com/v2/wp-content/themes/qwords/assets/images/icons/vcollapse2x.png");
+    background-position: center;
+}
+.accordion-button:focus {
+    box-shadow: none;
+}
+.accordion-button:not(.collapsed) {
+    color: var(--black-color);
+    background-color: transparent;
+}
+
+/* Hero Section */
+section#section-hero {
+    min-height: 100vh;
+    display: grid;
+    place-items: center;
+    background-image: url("https://qwords.com/v2/wp-content/themes/qwords/assets/images/shapes/webp/main-bg.webp");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 50px;
+}
+
+/* Search Domain Section */
+section#section-search-domain {
+    background-color: var(--primary-color);
+    background-image: url("https://qwords.com/v2/wp-content/themes/qwords/assets/images/shapes/search-domain-bg.png");
+}
+
+/* Featured Section */
+.card {
+    border-radius: var(--border-radius-size);
+    transition: 0.3s ease-in-out;
+}
+.card:hover {
+    transform: scale(0.95);
+}
+
+/* Testimonial Section */
+section#section-testimonial .header-quote {
+    position: relative;
+}
+
+section#section-testimonial .header-quote:before {
+    content: url("https://qwords.com/v2/wp-content/themes/qwords/assets/images/shapes/cite.png");
+    position: absolute;
+    top: -5px;
+    transform: scale(0.5) translate(0);
+}
+
+section#section-testimonial .header-quote h5 {
+    line-height: 1.8rem;
+    margin-left: 3rem;
+}
+
+section#section-testimonial .quote-details {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 1em;
+    margin-left: 3rem;
+    color: var(--gray-color);
+    text-decoration-style: dashed;
+}
+
+/* Footer */
+.footer {
+    padding: 5rem 1rem 1rem;
+    background: var(--black-color);
+    min-height: 953px;
+    color: var(--white-color);
+}
+
+.footer .qw-logo {
+    width: 194px;
+    max-width: 200px;
+}
+
+.footer #end-footer .social-icon {
+    max-width: 30px;
+}
+.footer #end-footer .social-icon i {
+    color: var(--white-color);
+    transition: all 0.3s ease-in-out;
+}
+.footer #end-footer .social-icon:hover i {
+    color: var(--primary-color);
+}
+
+.footer a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: all 0.3s ease-in-out;
+}
+.footer a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+.footer ul {
+    gap: 1rem;
+}
+.footer ul > li {
+    margin-bottom: 1rem;
+    font-weight: 400;
+}

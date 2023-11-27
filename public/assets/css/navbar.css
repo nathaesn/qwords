@@ -1,0 +1,115 @@
+.navbar-nav {
+    row-gap: 0.4rem;
+    column-gap: 1rem;
+}
+
+.nav-link {
+    color: var(--black-color);
+    font-weight: 700;
+}
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu.show {
+        display: block;
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    .dropdown-menu.show {
+        display: block;
+        width: 700px;
+    }
+    .dropdown-menu.dropdown-services.show {
+        display: block;
+        width: 600px !important;
+    }
+    .dropdown-menu.dropdown-internet.show {
+        display: block;
+        width: 350px !important;
+    }
+}
+
+.ct-navbar__dropdown-container .ct-navbar__dropdown-link,
+.ct-navbar__dropdown-link {
+    color: var(--black-color);
+    align-items: center;
+    background: 0 0;
+    border-radius: 0.75rem;
+    display: flex;
+    gap: 0.875rem;
+    margin-bottom: 0.5rem;
+    padding: 0.75rem;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: 0.3s ease-in-out;
+}
+.ct-navbar__dropdown-link:hover {
+    color: #fff;
+    background-color: var(--primary-color);
+    border-radius: 0.75rem;
+    padding: 0.75rem;
+    margin: 0 10px;
+}
+.ct-navbar__dropdown-content {
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 32px 72px rgb(0 87 178/16%);
+    padding: 1rem;
+}
+.ct-navbar__icon {
+    aspect-ratio: 1/1 auto;
+    height: 40px;
+    width: 40px;
+}
+.ct-navbar__content {
+    padding-left: 0;
+}
+.ct-navbar__title {
+    display: inline-flex;
+    font-weight: 600;
+    gap: 0.5rem;
+    margin-bottom: 2px;
+    white-space: nowrap;
+}
+.ct-navbar__title {
+    font-size: 1rem;
+    letter-spacing: 0.02rem;
+    line-height: 1.5rem;
+}
+.ct-navbar__description {
+    max-width: 300px;
+    white-space: normal;
+}
+
+.promo-link:before {
+    content: "";
+    display: inline-block;
+    animation: promo-link 4s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    color: var(--black-color);
+    margin-right: 5px;
+}
+.promo-link {
+    display: inline-block;
+    animation: promo-color 4s cubic-bezier(0.68, -0.6, 0.32, 1.6) infinite;
+    color: var(--black-color);
+}
+@keyframes promo-link {
+    0% {
+        content: "🎁";
+        opacity: 0;
+        transform: translateX(0px);
+    }
+    50% {
+        content: "🎁";
+        opacity: 1;
+        transform: translateX(4px);
+    }
+    100% {
+        content: "🎁";
+        opacity: 0;
+        transform: translateX(0px);
+    }
+}
